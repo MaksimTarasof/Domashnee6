@@ -68,8 +68,22 @@ public class StatsServiceTest {
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
+        int actual = service.belTheAverageSales(sales);
+        int expected = 5;
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test //6
+
+    public void hoghAwg() {
+
+        StatsService service = new StatsService();
+
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
         int actual = service.belowTheAverageSales(sales);
-        int expected = 12;
+        int expected = 5;
 
         Assertions.assertEquals(expected, actual);
     }

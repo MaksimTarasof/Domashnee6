@@ -52,12 +52,25 @@ public class StatsService {
     }
 
     //5 Количество месяцев, в которых продажи были ниже среднего
+    public int belTheAverageSales(int[] sales) {
+
+        int month = 0;
+
+        for (long sale : sales) {
+            if (sale < averageSales(sales)) {
+                month++;
+            }
+
+        }
+        return month;
+    }
+    //6 Количество месяцев, в которых продажи были выше среднего
     public int belowTheAverageSales(int[] sales) {
 
         int month = 0;
 
-        for (int i = 0; i < sales.length; i++) {
-            if (i < averageSales(sales)) {
+        for (long sale : sales) {
+            if (sale > averageSales(sales)) {
                 month++;
             }
 
